@@ -1,20 +1,15 @@
 function solution(s) {
-    var answer = '';
+    const numbers = s.split(" ").map(Number);
     
-    var array = s.split(" ").map(Number);
-    var maxValue = array[0];
-    var minValue = array[0];
+    let min = numbers[0];
+    let max = numbers[1];
     
-    for (var i=0; i <= array.length-1; i++) {
-        if(array[i] > maxValue) {
-            maxValue = array[i];
-        }
-        if(array[i] < minValue) {
-            minValue = array[i];
-        }
+    for(const num of numbers) {
+        if(min > num) min = num;
+        if(max < num) max = num;
     }
     
-    answer = `${minValue} ${maxValue}`
-    
-    return answer;
+    return `${min} ${max}`;
 }
+
+solution("1,2,3,4");
