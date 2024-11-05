@@ -1,11 +1,5 @@
 function solution(num) {
-    var answer = '';
-    
-    if (Math.abs(num) % 2 == 1) { 
-        answer = "Odd";
-    } else {
-        answer = "Even";
-    }
+    const answer = num % 2 === 0 ? "Even" : "Odd";
     
     return answer;
 }
