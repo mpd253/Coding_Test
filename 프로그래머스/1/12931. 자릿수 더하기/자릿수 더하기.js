@@ -1,13 +1,6 @@
-function solution(n)
-{
-    var answer = 0;
-    const array = n.toString()
+function solution(n) {
+    const sum = n.toString().split("").map(Number).reduce((acc, cur) => acc + cur);
     
-    for(let i=0; i<array.length; i++) {
-        answer += parseInt(array[i]);
-    }
+    return sum;
 
-    return answer;
 }
-
-console.log(solution(123));
