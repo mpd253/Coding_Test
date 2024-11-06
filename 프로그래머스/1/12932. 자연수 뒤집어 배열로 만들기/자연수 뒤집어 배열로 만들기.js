@@ -1,4 +1,5 @@
 function solution(n) {
-    const array = n.toString().split("").reverse().map(Number);
+    const array = String(n).split("").map(Number).reverse();
+    
     return array;
 }
