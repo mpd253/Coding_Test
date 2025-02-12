@@ -1,5 +1,4 @@
 function solution(x) {
-    let sum = String(x).split("").map(Number).reduce((acc, cur) => acc + cur);
-    
-    return x % sum === 0 ? true : false
+    let sum = x.toString().split("").reduce((acc, cur) => acc + Number(cur), 0);
+    return x % sum === 0;
 }
