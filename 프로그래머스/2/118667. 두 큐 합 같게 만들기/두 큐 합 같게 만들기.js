@@ -9,7 +9,7 @@ function solution(queue1, queue2) {
     let right = queue1.length;
     let count = 0;
     
-    while (left < newQueue.length && right < newQueue.length * 2) {
+    while (left < newQueue.length && right < newQueue.length) {
         if (sum1 === target) return count;
 
         if (sum1 > target) {
